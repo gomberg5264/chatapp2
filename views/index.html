@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Free Stuff LLC chatroom</title>
+  <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="/"><img src="/images/spyke.png" ></a>
+      <ul class="nav">
+        <li><a href="/documentation">Documentation</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <a href="https://github.com/allisonburtch/spyke"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://felipenmoura.org/talks/meet-ppw/slides/closing-images/forkme.png" alt="Fork me on GitHub"></a>
+
+<div class="row-fluid">
+      <div class="hero-unit span6">
+   <h2>True peer-to-peer video chat</h2>
+   <h2>Because you want to chat without anyone listening in.</h2>
+   </div>
+   </div>
+              
+    <button id = "chatroom" onclick= "goToRandomVid();" type="submit">Make video chat room</button>
+    <script type="text/javascript"></script>
+ <script>
+function randomVidName() {
+    var chars = "0123456789ABCDEFGHIJKLMNOPQRS-_=TUVWXYZabcdefghijklmnopqrstuvwxyz";
+    var string_length = 20;
+    var randomstring = '';
+    for (var i = 0; i < string_length; i++) 
+    {
+        var rnum = Math.floor(Math.random() * chars.length);
+        randomstring += chars.substring(rnum, rnum + 1);
+    }
+    return randomstring;
+  }         
+   
+function goToRandomVid() {
+  window.location = "/chatroom/" + randomVidName();
+}
+
+ </script>
+ 
+ </body>
+</html>
+
+
+ 
+      
